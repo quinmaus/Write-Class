@@ -20,7 +20,7 @@ public class Write {
         file = f;
         text = t;
     }
-    public void writeToFile(String file, String text){
+    public void writeToFile(){
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             writer.write(text);
