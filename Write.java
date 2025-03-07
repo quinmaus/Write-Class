@@ -39,11 +39,16 @@ public class Write {
             bufferedWriter.newLine();
             bufferedWriter.close();
 
-            System.out.println("Text appended successfully!");
-
         } catch (IOException e) {
             System.err.println("An error occurred: " + e.getMessage());
         }
+    }
+    public void newLine(){
+        File f = new File(file);
+        FileWriter fileWriter = new FileWriter(file, true);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        bufferedWriter.newLine();
+        bufferedWriter.close();
     }
     public String getfile(){
         return file;
